@@ -17,9 +17,38 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, s-maxage=31536000, immutable" }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/portfolio(/?.*)",
+      "destination": "/entry-points/portfolio.html"
+    },
+    {
+      "source": "/markets(/?.*)",
+      "destination": "/entry-points/markets.html"
+    },
+    {
+      "source": "/DYDX",
+      "destination": "/entry-points/dydx.html"
+    },
+    {
+      "source": "/DYDX/trading-rewards(/?.*)",
+      "destination": "/entry-points/trading-rewards.html"
+    },
+    {
+      "source": "/trade/([A-Z]+-USD)(/?.*)",
+      "destination": "/entry-points/trade-$1.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/entry-points/index.html"
