@@ -50,10 +50,10 @@ jobs:
         id: upstream
         run: |
           # Add upstream remote using HTTPS with token
-          git remote add upstream https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxprotocol/v4-web.git
+          git remote add upstream https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxprotocol/project-pup.git
 
           # Update origin to use HTTPS with token
-          git remote set-url origin https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxopsdao/v4-web.git
+          git remote set-url origin https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxopsdao/project-pup.git
 
           # Fetch all tags from upstream
           git fetch upstream
@@ -193,10 +193,10 @@ jobs:
       - name: Setup git remotes
         run: |
           # Add upstream remote using HTTPS with token
-          git remote add upstream https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxprotocol/v4-web.git
+          git remote add upstream https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxprotocol/project-pup.git
 
           # Update origin to use HTTPS with token
-          git remote set-url origin https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxopsdao/v4-web.git
+          git remote set-url origin https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/dydxopsdao/project-pup.git
 
           # Fetch all tags from upstream to ensure they are available locally
           git fetch upstream --tags
