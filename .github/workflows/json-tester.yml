@@ -37,8 +37,8 @@ jobs:
             if [[ "${GITHUB_REF_NAME}" == dos-* ]]; then
               VERSION="${GITHUB_REF_NAME#dos-}"
               DYDX_REFERENCE="refs/tags/release/v${VERSION}"
-              DYDX_URL="https://raw.githubusercontent.com/dydxprotocol/v4-web/${DYDX_REFERENCE}/public/configs/v1/env.json"
-              DOS_URL="https://raw.githubusercontent.com/dydxopsdao/v4-web/${GITHUB_REF_NAME}/public/configs/v1/env.json"
+              DYDX_URL="https://raw.githubusercontent.com/dydxprotocol/project-pup/${DYDX_REFERENCE}/public/configs/v1/env.json"
+              DOS_URL="https://raw.githubusercontent.com/dydxopsdao/project-pup/${GITHUB_REF_NAME}/public/configs/v1/env.json"
 
               # Debug constructed URLs
               echo "Constructed DYDX URL: ${DYDX_URL}"
